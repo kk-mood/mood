@@ -1,0 +1,22 @@
+{% include header.html %}
+<div id="container">
+    {% include navigation.html %}
+    <div id="main">
+        <h2> {{ page.title }} </h2>
+        {{ content }}
+        <div class="pre_next">
+            <div class="post_pre">
+                {% if page.previous.url %}
+                <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; 前一篇</a>
+                {% endif %}
+            </div>
+            <div class="post_next">
+                {% if page.next.url %}
+                <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">后一篇 &raquo;</a>
+                {% endif %}
+            </div>
+        </div>
+        {% include duoshuo.html %}
+    </div>
+</div>
+{% include footer.html %}

@@ -1,0 +1,8 @@
+*swp
+# only ignore comment of root DIC.
+/comment
+# ignore draft files.
+draft/*
+!/draft/template.md
+# ignore jekyll generate files.
+_site/

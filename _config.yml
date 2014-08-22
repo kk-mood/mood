@@ -1,0 +1,31 @@
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl: http://mood.karottc.com
+url: mood.karottc.com
+date_format: "ordinal"
+title: 负能量也是能量
+author: karottc chen 
+paginate: 16
+
+# ---------------- #
+#   RSS / Email    #
+# ---------------- #
+subscribe_rss: /atom.xml
+email:
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough", "highlight"]
+pygments: true
+permalink: /:year/:month/:day/:title
+gems:
+    - jekyll-sitemap
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+duoshuo_short_name: karottc
