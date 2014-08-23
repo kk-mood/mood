@@ -1,7 +1,9 @@
 ## About ##
 
 
-这是我的部署在github上的[博客](http://www.karottc.com)。
+这里只负责散发负能量，各种心情的记录.........
 
-链接：www.karottc.com
+慎重[翻阅](http://mood.karottc.com/)！！！
+
+链接：mood.karottc.com
 
