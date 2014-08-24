@@ -11,7 +11,7 @@ body {
     width: 60%;
     line-height: 150%;
     border: 1px solid LightGrey;
-    box-shadow: 2px 2px 5px #ccc;
+    /*box-shadow: 2px 2px 5px #ccc;*/
 }
 
 H1 {
