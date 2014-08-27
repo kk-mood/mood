@@ -5,5 +5,3 @@
 
 慎重[翻阅](http://mood.karottc.com/)！！！
 
-链接：mood.karottc.com
-
