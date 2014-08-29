@@ -13,7 +13,7 @@ title: karottc Chen
 	#include <stdin.h>
 	int main(int argc, char **argv)
 	{
-		fprintf(stderr,"Hello, there will be a happy travel.\n");
+		fprintf(stderr,"Hello, there will be an unknown travel.\n");
 		return 0;
 	}
 ```
