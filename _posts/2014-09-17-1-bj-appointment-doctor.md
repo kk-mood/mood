@@ -13,4 +13,4 @@ categories: 砸碎
 2014.09.17 21:45
 
 #### Footnotes: ####
-<sup><a href="#fnref:1" name="fn:1">1</a></sup> 在北京，去医院看病需要提前在网上预约，北京有统一的[网上预约平台](http://www.bjguahao.gov.cn/comm/index.html)，没有早上 9:30 开始预约，最多预约7天内的。
+<sup><a href="#fnref:1" name="fn:1">1</a></sup> 在北京，去医院看病需要提前在网上预约，北京有统一的[网上预约平台](http://www.bjguahao.gov.cn/comm/index.html)，每天早上 9:30 开始预约，最多预约7天内的。
