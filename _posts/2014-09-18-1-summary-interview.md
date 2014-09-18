@@ -24,10 +24,8 @@ categories: work
 
 第三部分：Linux。
 
-1. > -rw-r--r--   1 k  staff   456K  7 23 23:46 cscope.po.out
-    >
-    > drwxr-xr-x  21 k  staff   714B  9 15 22:53 fs
-   
+1. -rw-r--r--   1 k  staff   456K  7 23 23:46 cscope.po.out<br />
+   drwxr-xr-x  21 k  staff   714B  9 15 22:53 fs <br />
    分别解释上面两行的每一项参数。
 2. UNIX进程通信的方式，分别阐述不同；(信号量、共享内存、管道)
 3. 写出一个熟悉的设计模式，用UML或者伪代码均可。(最简单的 *单例模式* )
