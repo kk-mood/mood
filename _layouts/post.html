@@ -4,7 +4,7 @@
     <div id="main">
         <h2> {{ page.title }} </h2>
         {{ content }}
-        <div class="pre_next">
+        <div class="pre_next" style="display:none">
             <div class="post_pre">
                 {% if page.previous.url %}
                 <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; 前一篇</a>
