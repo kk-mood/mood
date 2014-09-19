@@ -4,10 +4,18 @@ layout: default
 
 <div class="postlist">
     {% for post in paginator.posts %}
-    <div class="overview">
+    <div class="overview" style="display:none">
         <div class="date">{{ post.date | date: "%b %d, %Y" }}</div>
         <div class="detail"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
     </div>
     {% endfor %}
+    <div class="overview">
+        <div class="date">Aug 23, 2014</div>
+        <div class="detail"><a href="http://mood.karottc.com/2014/08/23/first-mood-blog">第一篇blog，负能量说明</a></div>
+    </div>
+    <div class="overview">
+        <div class="date">Aug 23, 2014</div>
+        <div class="detail"><a href="http://mood.karottc.com/2014/08/23/duet">DUET 游戏通关</a></div>
+    </div>
 </div>
 {% include pagination.html %}
