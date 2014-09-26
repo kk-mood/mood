@@ -5,7 +5,7 @@ title: karottc Chen
 
 *网络ID:* karottc
 
-*Social:* [GitHub](https://github.com/karottc) | [Douban](http://www.douban.com/people/karottc/) | [weibo](http://weibo.com/karotte)
+*Social:* [GitHub](https://github.com/karottc) | [豆瓣](http://www.douban.com/people/karottc/) | [新浪微博](http://weibo.com/karotte)
 
 ```c
 	#include <stdin.h>
