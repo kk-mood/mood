@@ -10,11 +10,13 @@ categories: 砸碎
 顺便以前去过亚特兰大的Jerry可以讲讲一些刚到美国的注意事项，氛围还是一如既往的好。
 
 根据安排他们的行程应该是向下图那样先到 San Diego <br />
-<img src="/images/201410/20141005_business_trip2.jpg" width="700px" alt="到san diego的路线"/> <br />
+<img src="/images/201410/20141005_business_trip2.png" width="700px" alt="到san diego的路线"/> <br />
 
 住的的酒店离上班的地方走路20分钟可到，还算是不远，估计是考虑他们两个人都没有驾照，所以安排的近一点的酒店:<br />
-<img src="/images/201410/20141005_business_trip3.jpg" width="700px" alt="酒店到公司"/> <br />
+<img src="/images/201410/20141005_business_trip3.png" width="700px" alt="酒店到公司"/> <br />
 
 可能两个月后我就得按照这个相同路线来一次了，现在还是想想这两个月怎么提高一下令人捉急的英语。
+
+室友出差，我一个人住两个月，这么大的房子一个住，想想还真是寂寥吖。
 
 2014.10.05 15:55
