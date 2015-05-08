@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 危机意识
-categories:[life,work,study]
+categories: [life,work,study]
 ---
 
 几个月没有写东西了，现在又回来了，一切如常，可以继续努力向前！
