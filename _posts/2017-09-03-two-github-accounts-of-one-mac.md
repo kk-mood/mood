@@ -43,6 +43,16 @@ IdentityFile ~/.ssh/id_rsa_2
 
 #### 0x04
 
+将刚刚生成的ssh-key添加到ssh-agent：
+
+```shell
+$ ssh-add ~/.ssh/id_rsa_2
+```
+
+这个添加操作是 **临时** 的，也就是每次开机都需要使用这个命令，所以可以把这命令写入到.bashrc 或者 .zshrc 中，避免每次都做相同的工作。
+
+#### 0x05
+
 测试是否能连通：
 
 $ ssh -T git@github.com
@@ -55,7 +65,7 @@ Hi your_second_name! You've successfully authenticated, but GitHub does not prov
 
 有这样的输出表示和两个账户连接正常。
 
-#### 0x05
+#### 0x06
 
 clone项目改动点，我们一般使用的以下命令来clone一个远程仓库：
 
