@@ -10,16 +10,23 @@ categories: [折腾]
 
 ### 方法
 
-1. 生成新的ssh-key：
+#### 0x01
+
+生成新的ssh-key：
 
 ```shell
 $ ssh-keygen -t rsa -C "your-email-address”
 ```
 
-当提示输入名字的时候，输入新的文件名：<font color="red">id_rsa\_2</font>。这时  `~/.ssh/`  目录中应该有两个这几个文件：`id_rsa, id_rsa.pub, id_rsa_2, id_rsa_2.pub` 。
+当提示输入名字的时候，输入新的文件名：<font color="red">id_rsa_2</font>。这时  `~/.ssh/`  目录中应该有两个这几个文件：`id_rsa, id_rsa.pub, id_rsa_2, id_rsa_2.pub` 。
 
-2. 添加新的ssh-key到新的Github账户。
-3. 在本地添加ssh-key的配置文件，在 `~/.ssh/` 中的新建config文件，添加如下代码：
+#### 0x02
+
+添加新的ssh-key到新的Github账户。
+
+#### 0x03
+
+在本地添加ssh-key的配置文件，在 `~/.ssh/` 中的新建config文件，添加如下代码：
 
 ```
 # 这个是为了已有的Github账户使用
@@ -34,34 +41,30 @@ IdentityFile ~/.ssh/id_rsa_2
 
 其中标红的部分是一个别名，可以随便起一个名字，在后面还会多次用到，所以用了红色标记。
 
-4. 测试是否能连通：
+#### 0x04
 
-```shell
+测试是否能连通：
+
 $ ssh -T git@github.com
 Hi your_name! You've successfully authenticated, but GitHub does not provide shell access.
 $ ssh -T git@<font color="red">alias_name</font>
 Hi your_second_name! You've successfully authenticated, but GitHub does not provide shell access.
-```
 
 有这样的输出表示和两个账户连接正常。
 
-5. clone项目改动点，我们一般使用的以下命令来clone一个远程仓库：
+#### 0x05
 
-```shell
+clone项目改动点，我们一般使用的以下命令来clone一个远程仓库：
+
 $ git clone git@<font color="red">github.com</font>:github_user_name/project_name.git 
-```
 
 这个时候，对于Github账户2的项目，需要把红色部分替换为上文中的 *alias_name*,即这clone命令为：
 
-```shell
 $ git clone git@<font color="red">alias_name</font>:github_user_name/project_name.git
-```
 
 对于已存在的git project，可能也需要通过下面的命令来从新设置远程的地址：
 
-```shell
 $ git remote set-url origin git@<font color="red">alias_name</font>:github_user_name/project_name.git
-```
 
 现在已经就可以无感知的使用ssh方式push代码了。
 
