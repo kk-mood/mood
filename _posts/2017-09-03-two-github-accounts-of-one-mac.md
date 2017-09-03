@@ -1,22 +1,74 @@
 ---
 layout: post
-title: 近期回顾
-categories: [杂碎]
+title: 一台Mac上使用两个Github账户的ssh-key
+categories: [折腾]
 ---
 
-突然感觉是时候回过头来看看最近都干了些什么了。我现在所在的这个组的产品已经是成熟产品了，所以并不像发展中的产品那样，有非常非常多的事可以做，现在也就是写写小需求，而那些较有技术性的活（比如接入层的重构）都给技术等级更高和需要答辩的人去做了。 我这几个月以来，做的主要事（或者说最多的事）就是去抓数据。
+### 背景 & 问题
 
-去抓AppAnnie的数据数据，抓最美应用、AppSolution、豌豆荚、少数派的数据，还有微博、豆瓣、果壳等等这些数据，做这些时，并没有提升我的python编程能力，完全就是体力活的感觉。同时，我也感觉这些对我要升级答辩也没有任何帮助。
+昨天突然想到一个tricks，需要有两个Github账户，所以我又去开了一个小号，在我把ssh-key添加进github-02账户的时候提示我这个ssh-key已经被使用了，不能再使用。后面搜索了一下发现，同一个ssh-key只能添加到一个Github账户中，所以需要找到一个解决方法来解决：一个电脑使用两个Github账户（或者说类似的Git账户）。
 
-现在数据有了，接下来应该要做的是分析和聚合数据（现在目前是另外有其他部门的人在做这个事），这倒是一个契机，给我去学习机器学习相关知识，然而，这样我又有新的焦虑，如果学习这个，那后台相关只是的学习就会放一放了，这样就有可能到头来，两边都没学好。 这是一条艰难的路，怎么走不知道，走下去是什么样，也不知道，但是却只能往前走。
+### 方法
 
-<hr />
+1. 生成新的ssh-key：
 
-上周一（也就是5月16号）开始，我的肩胛骨开始有点疼，具体疼的位置，像下图所示：
-<img src="/images/201601/20160522_health.JPG" alt="肩胛骨"/> <br />
+```shell
+$ ssh-keygen -t rsa -C "your-email-address”
+```
 
-查了一下，这个是上班族的通病，可能是感冒，长时间保持同一个姿势，肌肉劳损，劳累过度等等都会造成这个疼痛。而现在发生在我身上啦，所以趁刚开始疼的时候去修复TA。后面要严格控制加班时间，天天11点过或者更晚下班绝对不是办法，最好能在21～22点之间下班回家，然后锻炼一下。
+当提示输入名字的时候，输入新的文件名：<font color="red">id_rsa\_2</font>。这时  `~/.ssh/`  目录中应该有两个这几个文件：`id_rsa, id_rsa.pub, id_rsa_2, id_rsa_2.pub` 。
+
+2. 添加新的ssh-key到新的Github账户。
+3. 在本地添加ssh-key的配置文件，在 `~/.ssh/` 中的新建config文件，添加如下代码：
+
+```
+# 这个是为了已有的Github账户使用
+Host github.com
+HostName github.com
+IdentityFile ~/.ssh/id_rsa
+# 这个是为了新的Github账户使用
+Host <font color="red">alias_name</font>
+HostName github.com
+IdentityFile ~/.ssh/id_rsa_2
+```
+
+其中标红的部分是一个别名，可以随便起一个名字，在后面还会多次用到，所以用了红色标记。
+
+4. 测试是否能连通：
+
+```shell
+$ ssh -T git@github.com
+Hi your_name! You've successfully authenticated, but GitHub does not provide shell access.
+$ ssh -T git@<font color="red">alias_name</font>
+Hi your_second_name! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+有这样的输出表示和两个账户连接正常。
+
+5. clone项目改动点，我们一般使用的以下命令来clone一个远程仓库：
+
+```shell
+$ git clone git@<font color="red">github.com</font>:github_user_name/project_name.git 
+```
+
+这个时候，对于Github账户2的项目，需要把红色部分替换为上文中的 *alias_name*,即这clone命令为：
+
+```shell
+$ git clone git@<font color="red">alias_name</font>:github_user_name/project_name.git
+```
+
+对于已存在的git project，可能也需要通过下面的命令来从新设置远程的地址：
+
+```shell
+$ git remote set-url origin git@<font color="red">alias_name</font>:github_user_name/project_name.git
+```
+
+现在已经就可以无感知的使用ssh方式push代码了。
+
+### 总结
+
+网上有不少写这个方法的文章，但是感觉都长得一样，而且流程不连贯，实际操作起来可能会脱节，导致不知道问题出在哪里，所以自己写了这篇，算是一个备忘吧。
+
+2017.09.03 11:42
 
 
-
-2016.05.22 20：53
