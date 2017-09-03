@@ -46,8 +46,11 @@ IdentityFile ~/.ssh/id_rsa_2
 测试是否能连通：
 
 $ ssh -T git@github.com
+
 Hi your_name! You've successfully authenticated, but GitHub does not provide shell access.
+
 $ ssh -T git@<font color="red">alias_name</font>
+
 Hi your_second_name! You've successfully authenticated, but GitHub does not provide shell access.
 
 有这样的输出表示和两个账户连接正常。
